@@ -1,0 +1,13 @@
+.active {
+  font-weight: bold;
+}
+
+.nav {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+}
+
+.nav li:not(:last-child) {
+  margin-right: 1em;
+}
