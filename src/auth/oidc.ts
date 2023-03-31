@@ -12,6 +12,7 @@ export function sendAuthReq() {
   localStorage.setItem('nonce', nonce);
 
   const {authorization_endpoint, client_id, redirect_uri} = config;
+  
   const params = new URLSearchParams({
     client_id, 
     response_type: 'token id_token',
