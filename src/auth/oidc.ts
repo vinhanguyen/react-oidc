@@ -11,8 +11,14 @@ export function sendAuthReq() {
   const nonce = nanoid();
   localStorage.setItem('nonce', nonce);
 
-  const {authorization_endpoint, client_id, response_type, scope, redirect_uri} = config;
-  const params = new URLSearchParams({client_id, response_type, scope, redirect_uri, nonce}).toString();
+  const {authorization_endpoint, client_id, redirect_uri} = config;
+  const params = new URLSearchParams({
+    client_id, 
+    response_type: 'token id_token',
+    scope: 'openid profile email',
+    redirect_uri, 
+    nonce
+  }).toString();
   const {href} = new URL(`${authorization_endpoint}?${params}`);
   
   window.location.href = href;
