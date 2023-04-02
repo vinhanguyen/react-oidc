@@ -1,5 +1,5 @@
 import { decodeJwt } from "jose";
-import { useToken } from "./TokenProvider";
+import { useToken } from "./auth/TokenProvider";
 
 export default function Claims() {
   const token = useToken();

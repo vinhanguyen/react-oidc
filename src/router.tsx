@@ -1,7 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import App from "./App";
 import Callback, { loader as callbackLoader } from "./auth/Callback";
-import Claims from "./auth/Claims";
+import Claims from "./Claims";
 import Fetch from "./Fetch";
 import Root from "./Root";
 
