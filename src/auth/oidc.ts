@@ -3,8 +3,6 @@ import { nanoid } from "nanoid";
 import { config } from "./oidc.config";
 
 export function sendAuthReq() {
-  localStorage.removeItem('token');
-
   const {pathname} = new URL(window.location.href);
   localStorage.setItem('location', pathname);
 

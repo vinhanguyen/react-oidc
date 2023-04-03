@@ -12,7 +12,10 @@ export default function TokenProvider({children}: any) {
   useEffect(() => {
     const stored = localStorage.getItem('token');
     if (stored) {
-      setToken(stored);
+      const {exp} = decodeJwt(stored);
+      if (exp && exp*1000 > Date.now()) {
+        setToken(stored);
+      }
     }
   }, []);
 
