@@ -17,5 +17,6 @@ export default function Callback() {
 }
 
 export function loader() {
-  return {id_token: handleAuthResp()};
+  const id_token = handleAuthResp();
+  return {id_token};
 }
